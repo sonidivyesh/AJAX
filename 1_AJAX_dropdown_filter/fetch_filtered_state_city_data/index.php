@@ -307,6 +307,7 @@
         function clearFilter() {
             clearTableRows('example');
             loadStates();
+            $('#fetchCity').empty().append('<option value="" hidden disabled selected>Select City</option>');
             fetchData();
         }
     </script>
