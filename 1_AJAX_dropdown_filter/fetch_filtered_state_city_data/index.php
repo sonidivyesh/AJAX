@@ -248,14 +248,12 @@
         function fetchFilteredCitiesData() {
             $("#fetchCity").on('change', function() {
                 var selectedCityValue = $(this).val();
+                // alert(selectedCityValue);
                 // console.log('sending data:', {
                 //     'request': selectedCityValue
                 // });
 
                 clearTableRows('example');
-
-                // Use the city name to fetch ISO2 code
-                var selectedCityISO2 = cityCodeMap[selectedCityValue];
 
                 $.ajax({
                     url: 'api/fetch_filtered_city_data.php',
